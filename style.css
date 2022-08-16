@@ -1,0 +1,29 @@
+.heading{
+    font-size: 20px;
+    width: 100%;
+    margin: 0;
+    font-family: 'DynaPuff', cursive;
+}
+
+.infor{
+    color: black;
+    font-size: 18px;
+    font-family: 'Rubik Marker Hatch', cursive;
+}
+
+#copyright{
+color: white;
+background-color: grey;
+width: 100%;
+font-size: 15px;
+font-weight: bold;
+font-style: italic;
+line-height: 3;
+bottom: 0;
+position: fixed;
+text-align: center;
+}
+
+body{
+    background-color: aqua;
+}
