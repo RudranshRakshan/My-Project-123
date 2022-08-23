@@ -1,3 +1,9 @@
+nX=0;
+nY=0;
+rWx=0;
+lWx=0;
+diff=0;
+
 function preload() {
 
 }
@@ -19,9 +25,19 @@ function modelLoaded() {
 function gotResult(result) {
     if (result.length > 0) {
         console.log(result);
+        nX=result[0].pose.nose.x;
+        nY=result[0].pose.nose.y;
+        rWx=result[0].pose.rightWrist.x;
+        lWx=result[0].pose.leftWrist.x;
+        diff=floor(lWx-rWx);
+
     }
 }
 
 function draw() {
-    
+    background("lightgreen");
+    document.getElementById("sqSize").innerHTML="The size of text is: "+diff;
+    fill("blue");
+    textSize(diff);
+    text("Rudransh",nX,nY);
 }
