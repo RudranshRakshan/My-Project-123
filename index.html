@@ -1,40 +1,31 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik+Marker+Hatch&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
-  <title>Realtime Font</title>
+	<title>AI DJ WEB APP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+
   <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.sound.min.js"></script>
 </head>
-
-<body>
+<body background="background.jpg">
 <center>
-  <h3 class="btn btn-warning heading">Changing width, height and postion of a text in Realtime
-    <br>
-    <span class="infor"><span class="text-danger">NOTE </span>- Get your left and right wrist closer 
-      to reduce the size of the text and to increase the size of 
-      the text keep your left and right wrist far from each other. 
-      <br>
-      Move you nose to move the text</span>
-    <br>
-    <span id="sqSize"></span>
-
-  </h3>
+  	<h3 class="btn btn-warning heading">AI DJ WEB APP
+	    <br>
+	    <span class="note">NOTE - Move your left-hand wrist infront of the webcam to play Peter Pan Song. 
+        Move your right-hand wrist infront of the webcam to play Harry Potter Theme Song </span>
+  	</h3>
+	<br><br>
+<h2 class="btn btn-success" id="sName">Song Name:</h2>
 </center>
-<span id="copyright">Developed By Rudransh Rakshan</span>
+
 <script src="main.js"></script>
 </body>
 </html>
-
-

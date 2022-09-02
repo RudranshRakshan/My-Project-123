@@ -1,35 +1,20 @@
 .heading{
-    font-size: 20px;
-    width: 100%;
-    margin: 0;
-    font-family: 'DynaPuff', cursive;
-}
-
-.infor{
-    color: black;
-    font-size: 18px;
-    font-family: 'Rubik Marker Hatch', cursive;
-}
-
-#copyright{
-color: white;
-background-color: grey;
+font-size: 20px;
 width: 100%;
-font-size: 15px;
-font-weight: bold;
-font-style: italic;
-line-height: 3;
-bottom: 0;
-position: fixed;
-text-align: center;
+margin: 0px;
 }
 
-body{
-    background-color: aqua;
+.note{
+    color: black;
+    font-size: 15px;
 }
 
-canvas {
-    border: 4px solid rgb(255, 0, 0);
-    border-radius: 40px;
-    box-shadow: 6px 6px 6px rgb(68, 74, 33);
+canvas{
+    border: 5px dashed silver;
+    border-radius: 60px;
+}
+
+#sName{
+    font-size: 25px;
+    width: fit-content;
 }

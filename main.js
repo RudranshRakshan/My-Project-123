@@ -1,43 +1,41 @@
-nX=0;
-nY=0;
-rWx=0;
-lWx=0;
-diff=0;
+s1 = "";
+s2 = "";
+
+leftWX = 0;
+leftWY = 0;
+rightWX = 0;
+rightWY = 0;
 
 function preload() {
+    s1 = loadSound("music.mp3");
+    s2 = loadSound("music2.mp3");
 
 }
 
 function setup() {
-    video = createCapture(VIDEO);
-    video.size(500, 500);
-    video.position(90,100)
-    canvas = createCanvas(800, 550)
-    canvas.position(700, 150);
+    canvas = createCanvas(600, 500);
+    canvas.center();
+    video = createCapture(600, 500);
+    video.hide();
+
     pose = ml5.poseNet(video, modelLoaded);
-}
-
-function modelLoaded() {
-    console.log("model is loaded");
-    pose.on('pose', gotResult)
-}
-
-function gotResult(result) {
-    if (result.length > 0) {
-        console.log(result);
-        nX=result[0].pose.nose.x;
-        nY=result[0].pose.nose.y;
-        rWx=result[0].pose.rightWrist.x;
-        lWx=result[0].pose.leftWrist.x;
-        diff=floor(lWx-rWx);
-
-    }
+    pose.on('pose', gotPoses);
 }
 
 function draw() {
-    background("lightgreen");
-    document.getElementById("sqSize").innerHTML="The size of text is: "+diff;
-    fill("blue");
-    textSize(diff);
-    text("Rudransh",nX,nY);
+    image(video, 0, 0, 600, 500);
+}
+
+function modelLoaded() {
+    console.log("Model is loaded");
+}
+
+function gotPoses(result) {
+    if (result.length > 0) {
+        console.log(result);
+        leftWX = result[0].pose.leftWrist.x;
+        leftWY = result[0].pose.leftWrist.y;
+        rightWX = result[0].pose.rightWrist.x;
+        rightWY = result[0].pose.rightWrist.y;
+    }
 }
